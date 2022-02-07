@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Client.Models.Image>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Title = "Employee Data";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+    <div class="container">@ViewBag.Message</div>
+    <div class="row">
+   @foreach (var items in Model)
+   {
+        <div class="col-lg-4 col-sm-6 mb-3">
+       <div class="thumbnail">
+           <a  href="https://localhost:44365/Images/@items.ImageName" >
+               <img src="https://localhost:44365/Images/@items.ImageName" style="height:200px;width:350px;"/>
+         </a>
+       </div>
+               
+          
+
+        </div>
+   }
+
+    </div>
+
+</div>
